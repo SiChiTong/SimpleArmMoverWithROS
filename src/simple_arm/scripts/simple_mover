@@ -1,0 +1,51 @@
+#!/usr/bin/env python
+'''
+rospy
+It is the official Python client library for ROS. It provides most of the fundamental functionality required for interfacing with ROS via python.
+It has interface for creating Nodes, interfacing with Topics,Services,Parameters, and more.
+
+*Float64*
+It is one of the primitive message type in ROS.
+
+At the top of the mover function, two publisher are declared, one for joint 1 commands, and one for joint 2 commands.
+
+*rospy.init_node('arm_mover')*
+Initializes a client node and registers it whith the master. Here "arm_mover" is the name of the node. init_node() must be called before any other rospy package functions are called.
+
+ 
+*rate = rospy.Rate(10)*
+The rate object is create here with a value of 10 Hertz. Rates are used to limit the frequency at which certain loops spin in ROS. Choosing a rate which is too high may result in unnecessarily high CPU usage, While choosing a value too low could result in high overall system latency.Choosing  sensible values for all of the nodes in a ROS system is a bit of a fine-art.
+
+*start_time*
+start_time is used to determine how much time has elapsed. When using ROS with simulated time, rospy.Time.now() will initially return 0, until the first message has been received on the /clock topic. This is why start_time is set and polled continuously until a nonzero value is returned.
+
+more
+
+'''
+import math
+import rospy
+from std_msgs.msg import Float64
+
+def mover():
+    pub_j1 = rospy.Publisher('/simple_arm/joint_1_position_controller/command',
+                             Float64, queue_size=10)
+    pub_j2 = rospy.Publisher('/simple_arm/joint_2_position_controller/command',
+                             Float64, queue_size=10)
+    rospy.init_node('arm_mover', anonymous=True)
+    rate = rospy.Rate(10)
+    start_time = 0
+
+    while not start_time:
+        start_time = rospy.Time.now().to_sec()
+
+    while not rospy.is_shutdown():
+        elapsed = rospy.Time.now().to_sec() - start_time
+        pub_j1.publish(math.sin(2*math.pi*0.1*elapsed))
+        pub_j2.publish(math.sin(2*math.pi*0.1*elapsed))
+        rate.sleep()
+
+if __name__ == '__main__':
+    try:
+        mover()
+    except rospy.ROSInterruptException:
+        pass
