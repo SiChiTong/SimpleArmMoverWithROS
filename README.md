@@ -30,6 +30,22 @@ A topic is simply named bus which we can  think of as a pipe between nodes throu
 * Subscribe
   * Likewise to receive a message on a topic I know and must subscribe to it.
 
+## Message Passing
+Each ROS distribution comes with a variety of predefined message types which are available for your use.
+There are message types for communicating physical quantities such as
+* Positions
+* Velocities
+* Accelerations
+* Rotations
+* Durations
+There are also messages for communicating sensor readings such as:
+* Laser Scans
+* Images
+* Point Clouds
+* Inertial Measurements
+It's important to note that although the named messages would seem to imply text based contents they can in fact contain any kind of data.
+
+
 ##  Project Nodes
 * simple_mover-publish joint angle to simple_arm
 * arm_mover-provides a service called safe_mode
