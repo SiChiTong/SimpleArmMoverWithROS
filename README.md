@@ -22,6 +22,14 @@ As it name suggest, it is typically used to store parameters and configuration v
 ###### For example:
 A mobile robots wheel radius such as [BlueBot](https://github.com/fouliex/BlueBot) may be used by one node to estimate position and by another to calculate speed. Rather then storing the same information in multiple places nodes can look up the values as needed.
 
+### Topic
+Nodes can also share data with one another by passing messages over what are called topics.
+A topic is simply named bus which we can  think of as a pipe between nodes through which messages flow. 
+###### Publish
+In order to send a message on a topic, we say that anode was published to it.
+###### Subscribe
+Likewise to receive a message on a topic I know and must subscribe to it.
+
 ##  Project Nodes
 * simple_mover-publish joint angle to simple_arm
 * arm_mover-provides a service called safe_mode
