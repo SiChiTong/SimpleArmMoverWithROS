@@ -38,6 +38,7 @@ There are message types for communicating physical quantities such as
 * Accelerations
 * Rotations
 * Durations
+
 There are also messages for communicating sensor readings such as:
 * Laser Scans
 * Images
