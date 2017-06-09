@@ -3,6 +3,9 @@ Ros Nodes are a key abtraction that allows a robot system to be build modularly.
 This is an example of writing ROS nodes in Python.
 
 
+## Wiki Contents
+A. [**ROS Node and Topics**](https://github.com/fouliex/SimpleArmMoverWithROS/wiki/A.-ROS-Node-and-Topics)
+B. [**ROS Message Passing**](https://github.com/fouliex/SimpleArmMoverWithROS/wiki/B.-ROS-Message-Passing)
 
 ##  Project Nodes
 * simple_mover-publish joint angle to simple_arm
