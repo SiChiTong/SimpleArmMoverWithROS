@@ -27,7 +27,8 @@ A mobile robots wheel radius such as [BlueBot](https://github.com/fouliex/BlueBo
 
 ### Topic
 Nodes can also share data with one another by passing messages over what are called topics.
-![Topic]https://github.com/fouliex/SimpleArmMoverWithROS/blob/master/misc/Topic.JPG
+![Topic](https://github.com/fouliex/SimpleArmMoverWithROS/blob/master/misc/Topic.JPG)
+
 A topic is simply named bus which we can  think of as a pipe between nodes through which messages flow. 
 * **Publish**
   * In order to send a message on a topic, we say that anode was published to it.
