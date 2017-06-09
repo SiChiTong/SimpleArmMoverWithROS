@@ -1,6 +1,6 @@
 # Simple Arm Mover Simulation With ROS
 Ros Nodes are a key abtraction that allows a robot system to be build modularly.
-This is an example of writing ROS nodes in Python.
+This [Udacity clone project](https://github.com/udacity/simple_arm) is an example of writing ROS nodes in Python.
 
 
 ## Wiki Contents
