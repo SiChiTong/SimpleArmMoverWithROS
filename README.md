@@ -14,6 +14,8 @@ Ross manages these three complex steps by breaking each of them down into many s
 ###### For example:
 There may be nodes for each sensor and actuator in the system as well as nodes for things like *position estimation*(Perception), *behavior execution*(Decision Making) and *motor control*(Actuation).
 
+![ROS](https://github.com/fouliex/SimpleArmMoverWithROS/blob/master/misc/ROS.JPG)
+
 ### ROS Master Process
 At the center of these collection of nodes is ROS Master Process which acts as a sort of manager of all the nodes. The ROS master maintains a registry of all the active nodes on a system.  It then allows each node to discover other nodes in the system and establish lines of communication with them. In addition to allowing nodes to locate one another and communicate, the ROS master also hosts what's called the parameter server.
 
