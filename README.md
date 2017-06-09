@@ -29,11 +29,13 @@ A mobile robots wheel radius such as [BlueBot](https://github.com/fouliex/BlueBo
 Nodes can also share data with one another by passing messages over what are called topics.
 ![Topic]https://github.com/fouliex/SimpleArmMoverWithROS/blob/master/misc/Topic.JPG
 A topic is simply named bus which we can  think of as a pipe between nodes through which messages flow. 
-* Publish
+* **Publish**
   * In order to send a message on a topic, we say that anode was published to it.
-* Subscribe
+* **Subscribe**
   * Likewise to receive a message on a topic I know and must subscribe to it.
 ![PublishAndSubscribe](https://github.com/fouliex/SimpleArmMoverWithROS/blob/master/misc/PublishAndSubscribe.JPG)
+
+The arrows represent message flow from publishers to subscribers.It's important to note that each node may simultaneously publish and subscribe to a wide variety of topics. Taken together this network of nodes connected by topic's is called publish subscribe or a **Pub Sub Architecture**
 
 ## Message Passing
 Each ROS distribution comes with a variety of predefined message types which are available for your use.
