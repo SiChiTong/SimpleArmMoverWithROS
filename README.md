@@ -23,14 +23,17 @@ At the center of these collection of nodes is ROS Master Process which acts as a
 As it name suggest, it is typically used to store parameters and configuration values that are shared amongst the running nodes.
 ###### For example:
 A mobile robots wheel radius such as [BlueBot](https://github.com/fouliex/BlueBot) may be used by one node to estimate position and by another to calculate speed. Rather then storing the same information in multiple places nodes can look up the values as needed.
+![ROSMASTERPROCESS](https://github.com/fouliex/SimpleArmMoverWithROS/blob/master/misc/ROSMasterProcess.JPG)
 
 ### Topic
 Nodes can also share data with one another by passing messages over what are called topics.
+![Topic]https://github.com/fouliex/SimpleArmMoverWithROS/blob/master/misc/Topic.JPG
 A topic is simply named bus which we can  think of as a pipe between nodes through which messages flow. 
 * Publish
   * In order to send a message on a topic, we say that anode was published to it.
 * Subscribe
   * Likewise to receive a message on a topic I know and must subscribe to it.
+![PublishAndSubscribe](https://github.com/fouliex/SimpleArmMoverWithROS/blob/master/misc/PublishAndSubscribe.JPG)
 
 ## Message Passing
 Each ROS distribution comes with a variety of predefined message types which are available for your use.
