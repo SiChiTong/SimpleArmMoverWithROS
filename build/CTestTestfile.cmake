@@ -7,3 +7,6 @@
 subdirs(gtest)
 subdirs(first_package)
 subdirs(simple_arm)
+subdirs(RoboND-Kinematics-Project/gazebo_grasp_plugin)
+subdirs(RoboND-Kinematics-Project/kuka_arm)
+subdirs(RoboND-Kinematics-Project/kr210_claw_moveit)

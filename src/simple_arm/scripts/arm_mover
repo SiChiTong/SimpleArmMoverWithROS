@@ -1,8 +1,4 @@
 #!/usr/bin/env python
-'''
-
-Created by George Fouche
-'''
 
 import math
 import rospy
